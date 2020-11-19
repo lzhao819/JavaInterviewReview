@@ -10,5 +10,5 @@
 ### [第6章 Java底层知识：GC相关]
 ### [第7章 Java多线程与并发](docs/7.Java多线程与并发.md)([代码实例](src/com/examples/java/thread))
 ### [第8章 Java多线程与并发-原理](docs/8.Java多线程与并发-原理.md)
-### [第9章 Java常用类库与技巧]
+### [第9章 Java常用类库与技巧](docs/9.Java常用类库与技巧.md)
 ### [第10章 Java框架-Spring]
