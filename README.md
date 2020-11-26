@@ -3,7 +3,7 @@
 # Java面试知识点
 
 ### [第1章 计算机网络面试核心](docs/1.计算机网络面试核心.md)
-### [第2章 数据库]
+### [第2章 数据库](docs/2.数据库.md)
 ### [第3章 Redis]
 ### [第4章 Linux](docs/4.Linux.md)
 ### [第5章 Java底层知识：JVM](docs/5.Java底层知识JVM.md)
