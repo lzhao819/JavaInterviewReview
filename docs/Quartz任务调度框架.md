@@ -16,7 +16,11 @@
    * 8 分钟后触发：0 8 10 * * ?
    * 12 分钟后触发：0 12 10 * * ?
    * 动态生成 Cron：通过代码计算触发时间的分钟、小时、日期等字段，拼接为 Cron 表达式，避免硬编码。
-3. 参数传递与任务标识
+3. 路由策略
+    * 轮询Round
+    * 故障转移Failover: 按顺序心跳检测，第一个成功的处理
+    * 分片广播Sharing Broadcast：广播触发集群里所有机器进行一次任务
+4. 参数传递与任务标识
    
    JobDataMap：通过```usingJobData()```方法向 Job 传递交易Id/Payload/通知状态等参数。 
 
@@ -24,7 +28,7 @@
       * 用tradeId + 时间延迟作为 Payload 和 Trigger 的 identity，确保同一交易的相同时间点任务不会重复创建。
       * 若交易已确认，可通过```scheduler.checkExists(identity)```检查任务是否存在，避免重复调度。
       * Quartz 会自动处理重复注册的任务（覆盖或报错，取决于配置）
-4. 持久化任务（适用于分布式系统）
+5. 持久化任务（适用于分布式系统）
    * 问题：默认 Quartz 使用内存存储任务，系统重启后任务丢失。
      配置 Quartz 使用数据库持久化（如 MySQL），修改quartz.properties：
      ``` properties
@@ -35,10 +39,10 @@
      org.quartz.dataSource.myDS.url = jdbc:mysql://localhost:3306/quartz_db
      ```
      
-5. 任务优先级与重试机制
+6. 任务优先级与重试机制(失败怎么办)
    * 优先级设置：为 “超时违规” 通知配置更高优先级（通过 Trigger 的 setPriority() 方法），确保系统资源紧张时优先执行。
-   * 重试逻辑：在 Job 中添加失败重试（结合 SimpleTrigger 的 setRetryCount()。
-6. 面试高频问题解答
+   * 重试逻辑：在 Job 中添加失败重试（结合 SimpleTrigger 的 setRetryCount()。-->邮件报警
+7. 面试高频问题解答
 * 如果交易在 5 分钟内已确认，如何取消后续通知？
    * 在业务逻辑中调用 scheduler.deleteJob() 删除对应 Trigger 和 Job。
    * 或在 Job 执行前检查交易状态（如查询数据库），若状态为 “已确认” 则跳过通知。 
