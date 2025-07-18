@@ -7,7 +7,7 @@
 ### [Linux](docs/4.Linux.md)
 ### [Java底层知识：JVM](docs/5.Java底层知识JVM.md)
 ### [Java底层知识：GC相关](docs/6.Java底层知识GC相关.md)
-### [Java多线程与并发](docs/7.Java多线程与并发.md)([代码实例](src/com/examples/java/thread))
+### [Java多线程](docs/7.Java多线程.md)
 ### [Java多线程与并发-原理](docs/8.Java多线程与并发-原理.md)
 ### [Java常用类库与技巧](docs/9.Java常用类库与技巧.md)
 ### [Java框架-SpringFramework/SpringBoot/SpringCloud](docs/10.Java框架-Spring.md)
