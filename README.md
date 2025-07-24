@@ -14,6 +14,7 @@
 ### [MongoDB](docs/MongoDB.md)
 ### [消息队列-Kafka/EMS](docs/消息队列.md)
 ### [缓存-Gemfire/Redis/Apache Ignite](docs/缓存.md)
+### [设计模式](docs/设计模式.md)
 ### [Quartz任务调度框架](docs/Quartz任务调度框架.md)
 ### [Nginx](docs/Nginx.md)
 ### [RESTful](https://github.com/Snailclimb/JavaGuide/blob/main/docs/system-design/basis/RESTfulAPI.md)
