@@ -1,6 +1,6 @@
 package com.examples.java.thread;
 
-//创建线程方法2: 现Runnable接口
+//创建线程方法2: 实现Runnable接口
 public class MyRunnable implements Runnable{
     private String name;
     public MyRunnable(String name){
