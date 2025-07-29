@@ -4,7 +4,6 @@
 ### [数据库](docs/数据库.md)
 ### [Linux](docs/4.Linux.md)
 ### [Java底层知识：JVM](docs/5.Java底层知识JVM.md)
-### [Java底层知识：GC相关](docs/6.Java底层知识GC相关.md)
 ### [Java多线程](docs/7.Java多线程.md)
 ### [Java并发](docs/8.Java并发.md)
 ### [Java常用类库与技巧](docs/9.Java常用类库与技巧.md)
